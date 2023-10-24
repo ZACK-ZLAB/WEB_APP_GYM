@@ -20,14 +20,8 @@ def get_all():
         
         tipo_plano = plano.get_one(row["tipo_plano"])
         
-        atividade = Atividade(result["nome"],
-                              result["instrutor"],
-                              result["data"],
-                              result["duracao"],
-                              result["capacidade"],
-                              tipo_plano,
-                              result["ativo"],
-                              result["id"])
+        atividade = Atividade(row["nome"], row["instrutor"], row["data"], row["duracao"], row["capacidade"], tipo_plano, row["ativo"], row["id"])
+
 
         atividades.append(atividade)
 
@@ -98,14 +92,8 @@ def get_all_inactive():
         
         tipo_plano = plano.get_one(row["tipo_plano"])
         
-        atividade = Atividade(result["nome"],
-                              result["instrutor"],
-                              result["data"],
-                              result["duracao"],
-                              result["capacidade"],
-                              tipo_plano,
-                              result["ativo"],
-                              result["id"])
+        atividade = Atividade(row["nome"], row["instrutor"], row["data"], row["duracao"], row["capacidade"], tipo_plano, row["ativo"], row["id"])
+
 
         atividades.append(atividade)
 
